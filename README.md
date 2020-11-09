@@ -2,7 +2,7 @@
 
 > Allows the client to tunnel back to the host.
 
-![Node.js CI](https://github.com/cristianrgreco/ssh-remote-port-forward/workflows/Node.js%20CI/badge.svg?branch=master)
+![Node.js CI](https://github.com/cristianrgreco/ssh-remote-port-forward/workflows/Node.js%20CI/badge.svg?branch=main)
 [![npm version](https://badge.fury.io/js/ssh-remote-port-forward.svg)](https://www.npmjs.com/package/ssh-remote-port-forward)
 [![npm version](https://img.shields.io/npm/dm/ssh-remote-port-forward.svg)](https://www.npmjs.com/package/ssh-remote-port-forward)
 
