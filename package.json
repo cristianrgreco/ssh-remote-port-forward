@@ -1,0 +1,67 @@
+{
+  "name": "ssh-remote-port-forward",
+  "author": "Cristian Greco",
+  "version": "1.0.0",
+  "main": "dist/index",
+  "types": "dist/index",
+  "description": "SSH remote port forward",
+  "keywords": [
+    "ssh",
+    "remote",
+    "port",
+    "forward",
+    "forwarding"
+  ],
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/cristianrgreco/ssh-remote-port-forward#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cristianrgreco/ssh-remote-port-forward"
+  },
+  "bugs": {
+    "url": "https://github.com/cristianrgreco/ssh-remote-port-forward/issues"
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "npm run clean && tsc",
+    "clean": "rimraf dist",
+    "test": "cross-env jest",
+    "format": "prettier --write package.json 'src/**/*.ts'",
+    "lint": "eslint --fix package.json 'src/**/*.ts'",
+    "updateDeps": "npx npm-check-updates -u"
+  },
+  "dependencies": {
+    "@types/ssh2": "^0.5.45",
+    "ssh2": "^0.8.9"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.13",
+    "@types/node": "^14.10.1",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.1.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.3.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
+}
