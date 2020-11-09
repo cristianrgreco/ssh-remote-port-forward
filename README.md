@@ -15,16 +15,20 @@ npm install --save ssh-remote-port-forward
 ## Usage
 
 ```typescript
-import { createSshConnection, SshConnection, ConnectConfig } from "ssh-remote-port-forward";
-
-const localServerPort = 8000;
+import { 
+  createSshConnection, 
+  SshConnection, 
+  ConnectConfig 
+} from "ssh-remote-port-forward";
 
 const connectConfig: ConnectConfig = {
   host: "example",
   port: "22",
 };
 
-const sshConnection: SshConnection = await createSshConnection(connectConfig);
+const sshConnection: SshConnection = await createSshConnection(
+  connectConfig
+);
 
-await sshConnection.remoteForward(localServerPort)
+await sshConnection.remoteForward("localhost", 8000)
 ```

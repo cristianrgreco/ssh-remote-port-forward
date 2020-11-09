@@ -4,9 +4,9 @@ export class SshConnection {
   constructor(private readonly client: Client) {
   }
 
-  public async remoteForward(port: number): Promise<void> {
+  public async remoteForward(remoteAddress: string, remotePort: number): Promise<void> {
     await new Promise((resolve, reject) => {
-      this.client.forwardIn("127.0.0.1", port, (err) => {
+      this.client.forwardIn(remoteAddress, remotePort, (err) => {
         if (err) {
           reject(err);
           return;
