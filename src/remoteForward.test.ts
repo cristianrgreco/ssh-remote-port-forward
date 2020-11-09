@@ -31,7 +31,7 @@ test("should forward remote port", async () => {
   };
 
   const sshConnection: SshConnection = await createSshConnection(connectConfig);
-  await sshConnection.remoteForward(serverPort)
+  await sshConnection.remoteForward("localhost", serverPort)
 
   const { output } = await container.exec(["wget", "-O", "-", `http://localhost:${serverPort}`]);
 
