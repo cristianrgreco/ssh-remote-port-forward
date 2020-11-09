@@ -5,6 +5,7 @@
   "main": "dist/index",
   "types": "dist/index",
   "description": "SSH remote port forward",
+  "license": "MIT",
   "keywords": [
     "ssh",
     "remote",
