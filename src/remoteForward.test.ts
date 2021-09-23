@@ -6,7 +6,7 @@ import { createSshConnection, SshConnection, ConnectConfig } from ".";
 jest.setTimeout(180_000);
 
 test("should forward remote port", async () => {
-  const container = await new GenericContainer("testcontainers/sshd", "1.0.0")
+  const container = await new GenericContainer("testcontainers/sshd:1.0.0")
     .withExposedPorts(22)
     .withEnv("PASSWORD", "root")
     .withCmd([
