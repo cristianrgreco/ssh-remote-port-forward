@@ -1,7 +1,7 @@
 {
   "name": "ssh-remote-port-forward",
   "author": "Cristian Greco",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "dist/index",
   "types": "dist/index",
   "description": "SSH remote port forward",
